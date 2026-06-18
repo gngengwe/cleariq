@@ -31,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
       If something is missing or needs updating, reach George directly.
     </p>
     <div class="page-meta">
-      <span class="meta-item">Last updated: June 6, 2026</span>
+      <span class="meta-item">Last updated: June 18, 2026</span>
       <span class="meta-divider">·</span>
       <span class="meta-item">George Ngengwe</span>
       <span class="meta-divider">·</span>
@@ -52,6 +52,7 @@ import Layout from '../layouts/Layout.astro';
       <a href="#the-platform" class="toc-link">The platform</a>
       <a href="#the-market" class="toc-link">The market</a>
       <a href="#the-team" class="toc-link">The team</a>
+      <a href="#june-18-call" class="toc-link">June 18 discovery call</a>
       <a href="#where-we-are" class="toc-link">Where we are</a>
       <a href="#whats-next" class="toc-link">What comes next</a>
       <a href="#contact" class="toc-link">Reach George</a>
@@ -159,10 +160,10 @@ import Layout from '../layouts/Layout.astro';
                 </li>
                 <li>
                   <strong>The daily user is billing staff, not attorneys.</strong>
-                  At John's practice, his office manager Sarah Hudkin manages pre-certs, denials,
-                  and appeals alongside everything else she runs.
-                  She is not a lawyer. She doesn't have hours to draft letters.
-                  She needs automation and visibility, not a document workspace.
+                  At John's practice, billing and authorization staff manage pre-certs, denials,
+                  and appeals alongside everything else they run.
+                  They are not lawyers. They don't have hours to draft letters.
+                  They need automation and visibility, not a document workspace.
                 </li>
                 <li>
                   <strong>OBLs are the beachhead market.</strong>
@@ -197,8 +198,8 @@ import Layout from '../layouts/Layout.astro';
               </p>
               <p class="tl-body">
                 The NDA with John's practice, the MVP scope definition with Atabong,
-                and the first user session with Sarah are the immediate next steps.
-                This is where the work is right now.
+                and the first user session with Nancy Orellana's team are the immediate
+                next steps. This is where the work is right now.
               </p>
             </div>
           </div>
@@ -394,8 +395,28 @@ import Layout from '../layouts/Layout.astro';
                 pipeline, the insurer mix, the revenue at stake. He is both advisor and client.
               </p>
               <p class="team-bio">
-                His office manager, Sarah Hudkin, is the intended daily user —
-                the billing and authorization manager whose workflow ClearIQ is built around.
+                Nancy Orellana, practice manager for the vascular/OBL side of John's
+                practice, is the team's assigned primary contact and the person with
+                the best overall understanding of how the practice runs. Sara Tutkin
+                reports to her and handles day-to-day pre-cert and appeal work —
+                together they are the intended daily users ClearIQ is built around.
+              </p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar team-avatar--nancy">NO</div>
+            <div class="team-info">
+              <h3 class="team-name">Nancy Orellana</h3>
+              <span class="team-role">Practice Manager · Primary Daily-User Contact</span>
+              <p class="team-bio">
+                Practice manager for the vascular/OBL side of John's practice
+                (Cardiology Association of North Jersey, one of his three entities).
+                The team was specifically assigned to talk to her because she has the
+                best overall understanding of how the practice runs day to day.
+                Joined the June 18, 2026 discovery call directly and gave the most
+                detailed, ground-truth account of the authorization and appeal workflow
+                so far. Sara Tutkin reports to her.
               </p>
             </div>
           </div>
@@ -428,6 +449,170 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
         </div>
+      </section>
+
+      <!-- ─── 5b. June 18 Discovery Call ──────────────── -->
+      <section class="content-section" id="june-18-call">
+        <h2 class="section-h2">June 18 discovery call — detailed assessment</h2>
+
+        <p>
+          George and Atabong ran a second discovery call on June 18, 2026 — this time
+          with Nancy Orellana, practice manager for the vascular/OBL side of one of
+          John's three entities ("Cardiology Association of North Jersey"). John and
+          one other partner-side stakeholder joined briefly at the start. This was the
+          first time the team got a detailed, ground-truth account of the actual daily
+          workflow, rather than the owner's-eye view from John.
+        </p>
+
+        <span class="subhead">Key findings</span>
+        <ul class="tl-list">
+          <li>
+            <strong>Key-person dependency is the #1 pain point — not appeals.</strong>
+            Asked what a "magic wand" would fix, Nancy didn't mention appeals — she
+            wants a single button that surfaces every answer her one most-knowledgeable
+            staffer would give, so the practice isn't exposed when that person is out.
+            This may be a stronger lead message than the revenue-loss framing currently
+            on the landing page.
+          </li>
+          <li>
+            <strong>Provider note quality is the root cause of most denials.</strong>
+            Missing, rushed, or incomplete physician notes — not missing paperwork —
+            drive most denials. One provider had 250 open notes at once. A prior AI
+            scribe tool was rejected by a high-producing provider as "too slow,"
+            a reminder that provider-facing tools face real adoption resistance even
+            when administration wants them.
+          </li>
+          <li>
+            <strong>Peer-to-peer clinical trigger phrases were validated.</strong>
+            Specific language overturns denials in physician peer review — e.g.
+            "unstable angina," "chest pain despite optimal medical management,"
+            "severely abnormal stress test" (cardiac), and "symptomatic despite
+            compression stocking therapy and medical therapy for 5–6+ months" (venous).
+            This is a concrete, procedure-specific dataset ClearIQ can use to flag
+            missing language before submission.
+          </li>
+          <li>
+            <strong>Confirmed positioning: side-by-side assistant, not an EMR replacement.</strong>
+            The practice runs on Athena (AthenaOne), which already has its own
+            authorization tracker. George confirmed on the call: "we're not trying to
+            replace Athena... we're providing you the assistance." No API exists yet —
+            Nancy offered to record a redacted screen-capture walkthrough of her
+            workflow instead.
+          </li>
+          <li>
+            <strong>A separate, phone-driven denial stage exists after payment.</strong>
+            Post-procedure EOB-level denials and underpayments — sometimes despite
+            prior authorization — are handled almost entirely by phone, with vague
+            insurer reason codes and ~30-day follow-up. The Recovery & Reimbursement
+            Engine needs a call-prep/talking-points tool for this stage, not just
+            appeal letters.
+          </li>
+          <li>
+            <strong>RFA and EVLT confirmed as 2 of the 3 top weekly procedures</strong>
+            on the vascular/OBL side specifically (third name garbled in the
+            transcript — needs confirmation from George).
+          </li>
+        </ul>
+
+        <span class="subhead">Considerations</span>
+        <ul class="tl-list">
+          <li>
+            <strong>No labeled approve/deny dataset exists.</strong>
+            Nancy can only cleanly export CPT codes for procedures actually performed,
+            not a labeled history of what was approved versus denied. Any
+            historical-pattern analytics feature is blocked until this is solved or
+            worked around (e.g. orders-vs-completions as a proxy).
+          </li>
+          <li>
+            <strong>Real data sharing is gated on the partnership meeting.</strong>
+            The early-leaving stakeholder raised a "partnership meeting" on company
+            structure as a prerequisite before any real/identifiable sample data moves
+            to the team — this has to close before Nancy's offered workflow recording
+            or any EOB/CPT export can happen.
+          </li>
+          <li>
+            <strong>Vascular-side appeal volume is already low (~2/month)</strong>
+            because Nancy has already trained providers on what to include — this is a
+            low-volume, high-value, expertise-bottlenecked problem, not a
+            high-volume document-processing one. Sizing and messaging should reflect that.
+          </li>
+          <li>
+            <strong>Payer-specific behavior varies.</strong>
+            United Healthcare and Blue Cross are the worst general deniers across the
+            practice; Cigna is currently the hardest payer for this specific
+            practice/period. A "told no auth needed, then denied for no auth" pattern
+            recurs and could be strengthened by logging the insurer rep's name, call
+            date, and reference number at the time of the original guidance.
+          </li>
+        </ul>
+
+        <span class="subhead">Timeline &amp; task owners</span>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Owner</th>
+              <th>Target</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Close partnership meeting / NDA terms with John's practice</td>
+              <td>George</td>
+              <td>Gating — ASAP</td>
+              <td><span class="status-state status-state--progress">In Progress</span></td>
+            </tr>
+            <tr>
+              <td>Identify unidentified early-leaving stakeholder and their role</td>
+              <td>George</td>
+              <td>Before NDA finalized</td>
+              <td><span class="status-state status-state--pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Confirm third high-volume procedure name ("VAR"/"bar")</td>
+              <td>George (follow up with John)</td>
+              <td>This week</td>
+              <td><span class="status-state status-state--pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Reflect key-person-dependency angle in landing page copy</td>
+              <td>George</td>
+              <td>This week</td>
+              <td><span class="status-state status-state--pending">Not started</span></td>
+            </tr>
+            <tr>
+              <td>Redacted screen-capture walkthrough of Nancy's workflow</td>
+              <td>Nancy Orellana (provide) / Atabong (review)</td>
+              <td>After partnership terms close</td>
+              <td><span class="status-state status-state--pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Working session observing Sara Tutkin's day-to-day workflow</td>
+              <td>George + Atabong</td>
+              <td>After partnership terms close</td>
+              <td><span class="status-state status-state--pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Structure clinical trigger-phrase dataset (cardiac + venous)</td>
+              <td>Raphael (clinical validation) + Atabong (build)</td>
+              <td>Next sprint</td>
+              <td><span class="status-state status-state--pending">Not started</span></td>
+            </tr>
+            <tr>
+              <td>Resolve CPT-only data-access constraint for historical analytics</td>
+              <td>Atabong + Nancy Orellana</td>
+              <td>Before analytics scope is finalized</td>
+              <td><span class="status-state status-state--pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>MVP scope: fold in data-access and EOB-stage findings</td>
+              <td>Atabong + George</td>
+              <td>Ongoing</td>
+              <td><span class="status-state status-state--progress">In Progress</span></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <!-- ─── 6. Where We Are ────────────────────────── -->
@@ -482,8 +667,13 @@ import Layout from '../layouts/Layout.astro';
             <span class="status-state status-state--pending">Pending</span>
           </div>
           <div class="status-row">
+            <div class="status-indicator status-done"></div>
+            <span class="status-item">Discovery call with Nancy Orellana (practice manager) — June 18, 2026</span>
+            <span class="status-state status-state--done">Done</span>
+          </div>
+          <div class="status-row">
             <div class="status-indicator status-pending"></div>
-            <span class="status-item">First user session — Sarah Hudkin, John's office manager</span>
+            <span class="status-item">First user session — Sara Tutkin, under Nancy Orellana</span>
             <span class="status-state status-state--pending">Pending</span>
           </div>
           <div class="status-row">
@@ -550,7 +740,7 @@ import Layout from '../layouts/Layout.astro';
               <p class="next-step-body">
                 The MVP covers two pipeline stages: pre-certification filing support and
                 denial-to-appeal generation. It does not need to be the full nine-step pipeline
-                on day one — it needs to be useful in a real week for Sarah Hudkin.
+                on day one — it needs to be useful in a real week for Nancy Orellana and Sara Tutkin.
               </p>
             </div>
           </li>
@@ -559,7 +749,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <h3 class="next-step-heading">First user session</h3>
               <p class="next-step-body">
-                A structured research session with Sarah at John's practice —
+                A structured research session with Sara Tutkin at John's practice —
                 observing her current authorization workflow, testing ClearIQ's pre-cert
                 and appeal capabilities against real cases, and documenting what the product
                 needs to do differently. This is the product-market fit checkpoint.
@@ -958,6 +1148,55 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 4px;
   }
 
+  /* ─── Subhead ─────────────────────────────────── */
+  .subhead {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin: 28px 0 12px;
+  }
+
+  /* ─── Data table ──────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 28px;
+    font-size: 0.84rem;
+  }
+
+  .data-table th {
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+  }
+
+  .data-table td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-mid);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+
+  .data-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .data-table tbody tr:hover {
+    background: var(--ivory);
+  }
+
   /* ─── Pipeline grid ───────────────────────────── */
   .pipeline-grid {
     display: flex;
@@ -1122,6 +1361,7 @@ import Layout from '../layouts/Layout.astro';
   .team-avatar--john    { background: #1E3A5F; color: #93C5FD; }
   .team-avatar--atabong { background: #1C3A2B; color: #6EE7B7; }
   .team-avatar--raphael { background: #3B1E54; color: #DDD6FE; }
+  .team-avatar--nancy   { background: #4A3214; color: #FBBF6A; }
 
   .team-name {
     font-family: var(--font-serif);
